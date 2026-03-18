@@ -23,6 +23,6 @@ Triggered immediately after the AI Agent calls the browser (e.g., via chrome-dev
 
 1. Execute [listTools script](./scripts/listTools.js) to get the list of all `WebMCP tools`. **If an exception is thrown, skip the subsequent steps.**
 2. Read the return value of `listTools()`, which is an array where each element is an object containing three properties: `description`, `name`, and `inputSchema`, corresponding to `tool description`, `tool name`, and `JSON Schema string for tool input parameters`.
-3. Decide whether to call these `tools` as needed. If required, execute the `navigator.modelContextTesting.executeTool(tool.name, inputSchema)` method, where `tool.name` is the name of the tool and `inputSchema` is the JSON Schema string of the tool's input parameters.
+3. Decide whether to call these `tools` as needed. If required, execute the `navigator.modelContextTesting.executeTool(tool.name, inputSchema)` method, where `tool.name` is the name of the tool and `inputSchema` is the JSON Schema string of the tool's input parameters. Note that `executeTool` returns a `Promise<string>` which resolves to the execution result.
 
 Refer to [Standard API Document](./resources/standard-api.md)

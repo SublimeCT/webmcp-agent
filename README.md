@@ -27,7 +27,16 @@ tsx scripts/update-resources-docs.ts
 ```
 
 ## Usage
+1. install webmcp-agent skills
 
+```bash
+npx skills add SublimeCT/webmcp-agent
+
+# or use pnpm
+pnpm dlx skills add SublimeCT/webmcp-agent
+```
+
+2. Used in claude code
 ```bash
 claude
 
